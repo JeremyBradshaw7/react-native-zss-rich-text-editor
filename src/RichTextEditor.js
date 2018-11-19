@@ -472,6 +472,12 @@ export default class RichTextEditor extends Component {
     this.prepareInsert(); //This must be called BEFORE insertImage. But WebView uses a stack :/
   }
 
+  insertVideo(url, imageUrl) {
+    console.log('_insertVideo', actions.insertVideo, url, imageUrl);
+    this._sendAction(actions.insertVideo, {url, imageUrl});
+    this.prepareInsert(); //This must be called BEFORE insertImage. But WebView uses a stack :/
+  }
+
   insertText(text) {
     console.log('_insertText', actions.insertText, text);
     this._sendAction(actions.insertText, { text });
