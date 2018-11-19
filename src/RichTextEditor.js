@@ -325,9 +325,9 @@ export default class RichTextEditor extends Component {
     if (action === actions.setContentHtml) {
       data = this.escapeJSONString(data);
     }
-if (this.webView) {
-    this.webView.injectJavaScript(handleAction({type: action, data}));
-}
+    if (this.webView) {
+      this.webView.injectJavaScript(handleAction({type: action, data}));
+    }
   }
 
   //-------------------------------------------------------------------------------
@@ -459,6 +459,7 @@ if (this.webView) {
   }
 
   insertLink(url, title) {
+    console.log('_insertLink', title);
     this._sendAction(actions.insertLink, {url, title});
   }
 
@@ -472,8 +473,9 @@ if (this.webView) {
   }
 
   insertText(text) {
-    this._sendAction(actions.insertText, text);
-    this.prepareInsert(); //This must be called BEFORE insertText. But WebView uses a stack :/
+    console.log('_insertText', actions.insertText, text);
+    this._sendAction(actions.insertText, { text });
+    // this.prepareInsert(); //This must be called BEFORE insertText. But WebView uses a stack :/
   }
 
   setSubscript() {
