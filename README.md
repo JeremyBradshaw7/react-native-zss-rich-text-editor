@@ -72,6 +72,7 @@ The editor component. Simply place this component in your view hierarchy to rece
 *  `insertLink(url, title) `
 *  `updateLink(url, title) `
 *  `insertImage(attributes) `
+*  `insertText(text) `
 *  `setSubscript() `
 *  `setSuperscript()`
 *  `setStrikethrough() `
@@ -229,6 +230,7 @@ This is a set of consts of all supported actions. These will be passed in arrays
 	  	insertLink: 'INST_LINK',
 	  	updateLink: 'UPDATE_LINK',
 	  	insertImage: 'INST_IMAGE',
+	  	insertText: 'INST_TEXT',
 	  	setSubscript: 'subscript',
 	  	setSuperscript: 'superscript',
 	  	setStrikethrough: 'strikeThrough',

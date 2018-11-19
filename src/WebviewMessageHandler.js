@@ -58,6 +58,8 @@ export function handleAction (action) {
       return `zss_editor.updateLink('${action.data.url}', '${action.data.title}');`;
     case actions.insertImage:
       return `zss_editor.insertImage('${action.data}');`;
+    case actions.insertText:
+      return `zss_editor.insertText('${action.data}');`;
     case actions.setSubscript:
       return 'zss_editor.setSubscript();';
     case actions.setSuperscript:

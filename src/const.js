@@ -34,6 +34,7 @@ export const actions = {
   insertLink: 'INST_LINK',
   updateLink: 'UPDATE_LINK',
   insertImage: 'INST_IMAGE',
+  insertText: 'INST_TEXT',
   setSubscript: 'subscript',
   setSuperscript: 'superscript',
   setStrikethrough: 'strikeThrough',

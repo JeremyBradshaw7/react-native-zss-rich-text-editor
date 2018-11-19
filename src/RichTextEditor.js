@@ -469,6 +469,11 @@ export default class RichTextEditor extends Component {
     this.prepareInsert(); //This must be called BEFORE insertImage. But WebView uses a stack :/
   }
 
+  insertText(text) {
+    this._sendAction(actions.insertText, text);
+    this.prepareInsert(); //This must be called BEFORE insertText. But WebView uses a stack :/
+  }
+
   setSubscript() {
     this._sendAction(actions.setSubscript);
   }
