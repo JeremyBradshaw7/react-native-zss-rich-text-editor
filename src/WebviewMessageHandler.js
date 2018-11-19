@@ -1,7 +1,7 @@
 import {actions, messages} from './const';
 
 export function handleAction (action) {
-  console.log('handleAction', action);
+  console.log('handleAction!', action, action.type, actions.insertText, action.type === actions.insertText);
   switch(action.type) {
     case actions.enableOnChange:
       return 'zss_editor.enableOnChange();';
@@ -60,6 +60,7 @@ export function handleAction (action) {
     case actions.insertImage:
       return `zss_editor.insertImage('${action.data}');`;
     case actions.insertText:
+      console.log('invoke insertText with', action.data);
       return `zss_editor.insertText('${action.data}');`;
     case actions.setSubscript:
       return 'zss_editor.setSubscript();';
