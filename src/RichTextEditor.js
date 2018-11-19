@@ -317,8 +317,14 @@ export default class RichTextEditor extends Component {
   };
 
   _sendAction(action, data) {
-    let jsonString = JSON.stringify({type: action, data});
-    jsonString = this.escapeJSONString(jsonString);
+    // let jsonString = JSON.stringify({type: action, data});
+    // jsonString = this.escapeJSONString(jsonString);
+
+    // initial content html needs escaping:
+    if (action === actions.setContentHtml) {
+      data = this.escapeJSONString(data);
+    }
+
     this.webView.injectJavaScript(handleAction({type: action, data}));
   }
 
