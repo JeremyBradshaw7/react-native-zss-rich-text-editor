@@ -325,8 +325,9 @@ export default class RichTextEditor extends Component {
     if (action === actions.setContentHtml) {
       data = this.escapeJSONString(data);
     }
-
+if (this.webView) {
     this.webView.injectJavaScript(handleAction({type: action, data}));
+}
   }
 
   //-------------------------------------------------------------------------------
