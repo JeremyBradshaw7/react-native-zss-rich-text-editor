@@ -1,7 +1,7 @@
 import {actions, messages} from './const';
 
 export function handleAction (action) {
-  console.log('handleAction!', action, action.type, actions.insertText, action.type === actions.insertText);
+  console.log('handleAction!', action);
   switch(action.type) {
     case actions.enableOnChange:
       return 'zss_editor.enableOnChange();';
@@ -58,10 +58,10 @@ export function handleAction (action) {
     case actions.updateLink:
       return `zss_editor.updateLink('${action.data.url}', '${action.data.title}');`;
     case actions.insertImage:
-      return `zss_editor.insertImage('${action.data}');`;
+      return `zss_editor.insertImage('${JSON.stringify(action.data)}');`;
     case actions.insertVideo:
       console.log('invoke insertVideo with', action.data);
-      return `zss_editor.insertVideo('${action.data}');`;
+      return `zss_editor.insertVideo('${action.data.url}', '${action.data.imageUrl}');`;
     case actions.insertText:
       console.log('invoke insertText with', action.data);
       return `zss_editor.insertText('${action.data}');`;

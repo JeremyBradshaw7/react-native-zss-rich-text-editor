@@ -90,7 +90,7 @@ export default class RichTextEditor extends Component {
 
   onMessage(event){
     try {
-      console.log('onMessage', event.nativeEvent);
+      // console.log('onMessage', event.nativeEvent);
       const message = JSON.parse(event.nativeEvent.data);
 
       switch (message.type) {
@@ -159,7 +159,7 @@ export default class RichTextEditor extends Component {
           this.showLinkDialog(title, url);
           break;
         case messages.LOG:
-          console.log('FROM ZSS', message.data);
+          console.log('ZSS LOG ::::::::::::::::: ', message.data);
           break;
         case messages.SCROLL:
           this.webView.setNativeProps({contentOffset: {y: message.data}});
