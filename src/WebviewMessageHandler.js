@@ -59,6 +59,9 @@ export function handleAction (action) {
       return `zss_editor.updateLink('${action.data.url}', '${action.data.title}');`;
     case actions.insertImage:
       return `zss_editor.insertImage('${action.data}');`;
+    case actions.insertVideo:
+      console.log('invoke insertVideo with', action.data);
+      return `zss_editor.insertVideo('${action.data}');`;
     case actions.insertText:
       console.log('invoke insertText with', action.data);
       return `zss_editor.insertText('${action.data}');`;
