@@ -1,6 +1,7 @@
 import {actions, messages} from './const';
 
 export function handleAction (action) {
+  console.log('handleAction', action);
   switch(action.type) {
     case actions.enableOnChange:
       return 'zss_editor.enableOnChange();';

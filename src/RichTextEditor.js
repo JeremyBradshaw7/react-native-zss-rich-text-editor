@@ -64,7 +64,7 @@ export default class RichTextEditor extends Component {
   }
 
   _onKeyboardWillShow(event) {
-    console.log('!!!!', event);
+    // console.log('!!!!', event);
     const newKeyboardHeight = event.endCoordinates.height;
     if (this.state.keyboardHeight === newKeyboardHeight) {
       return;
@@ -90,6 +90,7 @@ export default class RichTextEditor extends Component {
 
   onMessage(event){
     try {
+      console.log('onMessage', event.nativeEvent);
       const message = JSON.parse(event.nativeEvent.data);
 
       switch (message.type) {

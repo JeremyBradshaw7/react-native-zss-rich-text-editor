@@ -1356,8 +1356,9 @@
 			}
 
 			zss_editor.insertText = function(text) {
+        console.log('editor.insertText', text);
 				zss_editor.restorerange();
-				zss_editor.insertHTML(text);
+				zss_editor.insertHTML('<p>' + encodeHtmlEntities(text) + '</p>');
 				zss_editor.enabledEditingItems();
 			}
 

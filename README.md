@@ -203,7 +203,7 @@ This is a set of consts of all supported actions. These will be passed in arrays
 	  	setContentHtml: 'SET_CONTENT_HTML',
 	  	getTitleHtml: 'GET_TITLE_HTML',
 	  	getTitleText: 'GET_TITLE_TEXT',
-	 	getContentHtml: 'GET_CONTENT_HTML',
+	  	getContentHtml: 'GET_CONTENT_HTML',
 	  	getSelectedText: 'GET_SELECTED_TEXT',
 	  	blurTitleEditor: 'BLUR_TITLE_EDITOR',
 	  	blurContentEditor: 'BLUR_CONTENT_EDITOR',
@@ -251,4 +251,4 @@ This is a set of consts of all supported actions. These will be passed in arrays
 
 ## Attribution
 
-`react-native-zss-rich-text-editor` is a wrapper around the amazing [ZSSRichTextEditor](https://github.com/nnhubbard/ZSSRichTextEditor/tree/master/ZSSRichTextEditor) project. It also communicates with the editor using (a tiny fork) of the awesome [react-native-webview-bridge](https://github.com/alinz/react-native-webview-bridge) project.
+`react-native-zss-rich-text-editor` is a wrapper around the amazing [ZSSRichTextEditor](https://github.com/nnhubbard/ZSSRichTextEditor/tree/master/ZSSRichTextEditor) project.
