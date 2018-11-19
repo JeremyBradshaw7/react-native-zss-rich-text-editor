@@ -52,6 +52,7 @@ export default class RichTextEditor extends Component {
   }
 
   componentWillMount() {
+    // 
     // if(PlatformIOS) {
     //   this.keyboardEventListeners = [
     //     Keyboard.addListener('keyboardWillShow', this._onKeyboardWillShow),
